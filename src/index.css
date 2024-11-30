@@ -9,6 +9,26 @@ body,
 #root,
 .app {
   height: 100%;
-  background-color: #010026;
-  @apply text-white;
+  background-color: #010026; /* Light mode background */
+  @apply text-white; /* Light mode text */
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #1a202c; /* Dark mode background */
+  @apply text-gray-200; /* Dark mode text color */
+}
+
+/* You can apply additional dark mode styles to specific elements */
+.card {
+  background-color: #f7fafc; /* Light mode card background */
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  transition: background-color 0.3s;
+}
+
+body.dark .card {
+  background-color: #4a5568; /* Dark mode card background */
+  border-color: #2d3748; /* Dark mode card border */
 }
