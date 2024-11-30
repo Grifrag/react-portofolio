@@ -11,4 +11,15 @@ root.render(
   </React.StrictMode>
 );
 
+// tailwind.config.js
+module.exports = {
+  darkMode: 'class', // Enable dark mode by class
+  theme: {
+    extend: {
+      // Add custom themes here if needed
+    },
+  },
+  plugins: [],
+};
+
 
