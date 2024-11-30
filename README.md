@@ -23,10 +23,6 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 ![Portfolio Screenshot](path/to/your/screenshot.png)  
 _Example of the portfolio layout and design._
 
-## 🤝 Contributing
-
-Feel free to fork this repository, make changes, and create pull requests. I welcome contributions and suggestions to improve the project.
-
 ## 📫 Contact
 
 - **Email**: [grigorisfragkakis@gmail.com](mailto:grigorisfragkakis@gmail.com)
