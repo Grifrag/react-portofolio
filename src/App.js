@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+  const [darkMode, setDarkMode] = useState(false); // Added dark mode state
   const isDesktop = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {
@@ -27,13 +28,25 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Toggle dark mode and set the class on the body element
+  useEffect(() => {
+    document.body.classList.toggle("dark", darkMode);
+  }, [darkMode]);
+
   return (
-    <div className="app bg-deep-blue">
+    <div className={`app bg-deep-blue ${darkMode ? "dark" : ""}`}>
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      {/* Dark mode toggle button */}
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="dark-mode-toggle-btn p-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition duration-300"
+      >
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
       <div className="w-5/6 mx-auto md:h-full">
         {isDesktop && (
           <DotGroup
